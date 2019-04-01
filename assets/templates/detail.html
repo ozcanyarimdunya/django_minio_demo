@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div>
+    <h3>Todo Detail</h3>
+    <hr>
+    <table>
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>$</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name:</td>
+          <td>{{ object.name }}</td>
+        </tr>
+        <tr>
+          <td>Cover:</td>
+          <td>{{ object.cover }}</td>
+        </tr>
+        <tr>
+          <td>Document:</td>
+          <td>{{ object.document }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}

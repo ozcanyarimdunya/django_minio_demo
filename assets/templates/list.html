@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div>
+    <h3>Todo List</h3>
+    <a href="{% url 'todo:create' %}">Create</a>
+    <hr>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Cover</th>
+        <th>Document</th>
+        <th>Operation</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for obj in object_list %}
+        <tr>
+          <td>{{ obj.name }}</td>
+          <td>
+            <a href="#">{{ obj.cover }}</a>
+          </td>
+          <td>
+            <a href="#">{{ obj.document }}</a>
+          </td>
+          <td>
+            | <a href="{% url 'todo:detail' obj.pk %}">detail</a>
+            | <a href="{% url 'todo:update' obj.pk %}">update</a>
+            | <a href="{% url 'todo:delete' obj.pk %}">delete</a> |
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
