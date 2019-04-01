@@ -4,7 +4,7 @@
 
 We are using minio for storing media files only.
 
-|##########|In-Local-Development|In-Production|
+| |In-Local-Development|In-Production|
 |----------|--------------------|-------------|
 |statics   |Saved in django files and served by django|Saved in django files and served by WhiteNoise  |
 |medias    |Saved in django files and served by django|Saved in minio and served by minio(not finished)|
@@ -51,5 +51,6 @@ make run
 TODO
 =====
 
-[] Provide direct download link
-[] Provide `Serve by minio as public`
+- [ ] Provide direct download link
+
+- [ ] Provide `Serve by minio as public`
